@@ -1,5 +1,5 @@
 # Category exercise 
-We keep TME categories (Semiconductors, Resistors, ...) in database table, so it's
+We keep categories (Semiconductors, Resistors, ...) in database table, so it's
 flat structure (with parent id information). We need to make it nested!
 
 ## Objective
