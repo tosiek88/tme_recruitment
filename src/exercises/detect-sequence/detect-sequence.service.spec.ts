@@ -17,7 +17,7 @@ describe("Sequence detection in array", () => {
   });
 
   it("Two sequences in input we should return start index of second", () => {
-    const inputSeq = [1, 2, 3, 8, 7, 8, 7, 1, 1, 1];
+    const inputSeq = [1, 22, 3, 8, 7, 8, 7, 1, 1, 1];
     const searchedSeq = [8, 7];
 
     expect(DetectSequenceService.detect(inputSeq, searchedSeq)).to.be.equal(5);
