@@ -5,7 +5,6 @@ describe("Sequence detection in array", () => {
   it("No sequence found", () => {
     const inputSeq = [1, 2, 3];
     const searchedSeq = [8, 7];
-
     expect(DetectSequenceService.detect(inputSeq, searchedSeq)).to.be.equal(-1);
   });
 
