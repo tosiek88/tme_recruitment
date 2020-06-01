@@ -39,9 +39,9 @@ describe("Alternative Sequence detection in array", () => {
   });
 
   it("Two sequences in input we should return start index of second", () => {
-    const inputSeq = [1, 22, 0.2, 8, 7, 8, 7, 1, 1, 1];
+    const inputSeq = [1, 22, 0.2, 8, 7, 6,6, 8,7, 8, 7, 1, 1, 1];
     const searchedSeq = [8, 7];
 
-    expect(DetectSequenceService.detect2(inputSeq, searchedSeq)).to.be.equal(5);
+    expect(DetectSequenceService.detect2(inputSeq, searchedSeq)).to.be.equal(9);
   });
 });

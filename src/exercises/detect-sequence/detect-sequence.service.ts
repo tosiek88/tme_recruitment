@@ -61,11 +61,13 @@ export class DetectSequenceService {
     let result = knuthMorrisPratt(inputSeq, searchedSeq);
     if (result !== -1) {
       // check if rest of array has pattern
+        let index=0
       do {
         const arr = inputSeq.slice(result + searchedSeq.length, inputSeq.length + 1);
-        let index = knuthMorrisPratt(arr, searchedSeq);
-        result = index === -1 ? result : result + searchedSeq.length;
-      } while (result <= -1);
+        index = knuthMorrisPratt(arr, searchedSeq);
+        console.log(index);
+        result = index === -1 ? result : result +index+ searchedSeq.length;
+      } while (index> -1);
     }
     return result;
   }
