@@ -4,9 +4,6 @@ import { ProductsScoreService } from "./products-score.service";
 import { ProductBasic, CustomerSymbol, DescriptionWords } from "./types";
 
 describe("Compute score and sort products desc", () => {
-  it("empty", ()=>{
-    return true;
-  });
   it("Simple scoring usage", (done) => {
     const inputPhrase = "diode";
     const productsLimit = 2;
@@ -24,7 +21,7 @@ describe("Compute score and sort products desc", () => {
     // Unsorted!
     const customerSymbols$: Observable<CustomerSymbol> = of(
       { productId: 4, customerSymbol: "foo" },
-      { productId: 3, customerSymbol: "dioda" } // 1000
+      { productId: 3, customerSymbol: "diode" } // 1000 //mistake?
     );
 
     // Unsorted!
