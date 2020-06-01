@@ -65,7 +65,6 @@ export class DetectSequenceService {
       do {
         const arr = inputSeq.slice(result + searchedSeq.length, inputSeq.length + 1);
         index = knuthMorrisPratt(arr, searchedSeq);
-        console.log(index);
         result = index === -1 ? result : result +index+ searchedSeq.length;
       } while (index> -1);
     }
