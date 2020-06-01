@@ -11,17 +11,18 @@ export class ProductsScoreService {
     const customerSymbolsArray = customerSymbols$.pipe(toArray());
 
     const descriptionsArray = descriptions$.pipe(toArray());
-
+// HELPER function to merge relationship across objects
     const mergeById = <T extends { id: number }, P extends { productId: number }>([t, s]: [T[], P[]]) =>
       t.map((p) =>
         Object.assign(
           {},
           p,
           s.find((q) => p.id === q.productId),
-        ),
+        )
       );
-
+// combine products with customers symbols
     const productsSymbols = combineLatest(productsBasicArray, customerSymbolsArray).pipe(map(mergeById));
+
 
     const all$ = combineLatest(productsSymbols, descriptionsArray).pipe(map(mergeById));
 
